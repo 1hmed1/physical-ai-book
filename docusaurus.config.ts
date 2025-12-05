@@ -2,32 +2,30 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// Detect deployment platform
-const isVercel = process.env.VERCEL === '1';
-
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics — A Modern Technical Guide',
   tagline: 'A Modern Technical Guide to Physical AI & Humanoid Robotics',
   favicon: 'img/favicon.ico',
-  
-  // Conditional URL and baseUrl based on deployment platform
-  url: isVercel ? 'https://physical-ai-book-sage.vercel.app' : 'https://1hmed1.github.io',
-  baseUrl: isVercel ? '/' : '/physical-ai-book/',
-  
+
+  // Production URL
+  url: 'https://1hmed1.github.io',
+  baseUrl: '/physical-ai-book/',
+
   // GitHub pages deployment config
   organizationName: '1hmed1',
   projectName: 'physical-ai-book',
   deploymentBranch: 'gh-pages',
+
   trailingSlash: false,
-  
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  
+
   presets: [
     [
       'classic',
@@ -43,7 +41,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  
+
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
